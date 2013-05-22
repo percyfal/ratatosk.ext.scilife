@@ -32,7 +32,7 @@ To install the development version of :mod:`ratatosk.ext.scilife`, do
 Running the tests
 -----------------
 
-Cd to the luigi test directory (``tests``) and run
+Cd to the test directory (``test``) and run
 
 .. code-block:: text
 
