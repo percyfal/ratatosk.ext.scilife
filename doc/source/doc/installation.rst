@@ -12,8 +12,8 @@ The following command sequence should install
 
    INSTALL_PREFIX=~/opt/test
    git clone https://github.com/percyfal/ratatosk.ext.scilife $INSTALL_PREFIX/ratatosk.ext.scilife
-   cd $INSTALL_PREFIX/ratatosk && python setup.py develop
-   cd $INSTALL_PREFIX/ratatosk/test && nosetests -v -s
+   cd $INSTALL_PREFIX/ratatosk.ext.scilife && python setup.py develop
+   cd $INSTALL_PREFIX/ratatosk.ext.scilife/test && nosetests -v -s
 
 Pre-requisites
 --------------
