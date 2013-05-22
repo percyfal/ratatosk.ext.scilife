@@ -26,16 +26,11 @@ setup(name = "ratatosk.ext.scilife",
       scripts = glob.glob('scripts/*.py') + glob.glob('scripts/*.pl'),
       install_requires = [
         "drmaa >= 0.5",
-        "luigi",
-        "nose",
         "ratatosk >= 0.1.0",
         "cutadapt",
         ],
       test_suite = 'nose.collector',
       packages=find_packages(exclude=['test']),
-      # [
-      #   'ratatosk.scilife'
-      #   ],
       package_data = {
         'ratatosk':[
             'config/scilife/*',
