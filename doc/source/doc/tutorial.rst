@@ -4,6 +4,17 @@ Tutorial
 This tutorial shows how to run some common analyses with the helper
 scripts. The focus is on submitting jobs to the cluster via SLURM.
 
+.. note:: You can receive mail notifications by creating a file
+   ``client.cfg`` in the directory where you submit the jobs. The file
+   should have the following content:
+
+   .. code-block:: text
+
+      [core]
+      error-email: YOURMAILADDRESS
+
+
+
 Pipelines
 ---------
 
