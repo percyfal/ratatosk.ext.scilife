@@ -10,7 +10,7 @@ The following command sequence should install
 
 .. code-block:: text
 
-   INSTALL_PREFIX=~/opt/test
+   INSTALL_PREFIX=~/opt
    git clone https://github.com/percyfal/ratatosk.ext.scilife $INSTALL_PREFIX/ratatosk.ext.scilife
    cd $INSTALL_PREFIX/ratatosk.ext.scilife && python setup.py develop
    cd $INSTALL_PREFIX/ratatosk.ext.scilife/test && nosetests -v -s
@@ -22,6 +22,16 @@ Install `ratatosk <https://github.com/percyfal/ratatosk>`_. To run the
 full test suite, you also need to install the test data set
 `ngs.test.data <https://github.com/percyfal/ngs.test.data.git>`_. The
 test data set is necessary for testing and running the pipelines.
+
+:mod:`ratatosk.ext.scilife` makes use of the :mod:`drmaa` module to
+interact with SLURM. Add the following to ``.bashrc``:
+
+.. code-block:: text
+
+   # DRMAA for SLURM and SGE
+   export DRMAA_LIBRARY_PATH=/bubo/sw/apps/build/slurm-drmaa/1.0.6/lib/libdrmaa.so
+   export DRMAA_PATH=$DRMAA_LIBRARY_PATH
+
 
 .. _installation:
 
@@ -46,11 +56,19 @@ To install the development version of :mod:`ratatosk.ext.scilife`, do
 Running the tests
 -----------------
 
+Make sure that an instance of the daemon ``ratatoskd`` is running in
+the background. It may be convenient to run it in a ``screen``
+session.
+
+.. code-block:: text
+
+   ratatoskd &
+
 Cd to the test directory (``test``) and run
 
 .. code-block:: text
 
-	nosetests -v -s 
+   nosetests -v -s 
 
 .. note:: Currently (20130417) many tests are failing but will be
    fixed shortly

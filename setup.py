@@ -18,7 +18,7 @@ import os
 import glob
 
 setup(name = "ratatosk.ext.scilife",
-      version = "0.1.0",
+      version = "0.1.0.1",
       author = "Per Unneberg",
       author_email = "per.unneberg@scilifelab.se",
       description = "ratatosk addon for Science for Life Laboratory",
@@ -28,6 +28,7 @@ setup(name = "ratatosk.ext.scilife",
         "drmaa >= 0.5",
         "ratatosk >= 0.1.0",
         "cutadapt",
+        "texttable",
         ],
       test_suite = 'nose.collector',
       packages=find_packages(exclude=['test']),
