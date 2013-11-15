@@ -69,6 +69,7 @@ ratatosk.lib.tools.gatk:
   ClipReads:
     parent_task: ratatosk.lib.tools.gatk.PrintReads
   UnifiedGenotyper:
+    options: "-stand_call_conf 30.0 -stand_emit_conf 10.0 --output_mode EMIT_VARIANTS_ONLY -glm BOTH"
     parent_task: ratatosk.lib.tools.gatk.ClipReads
   VariantEval:
     parent_task: ratatosk.pipeline.haloplex.VariantHaloFiltration
